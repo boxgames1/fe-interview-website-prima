@@ -1,0 +1,15 @@
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  min-height: 300px;
+}
+
+.empty-message {
+  color: #666666;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}
+

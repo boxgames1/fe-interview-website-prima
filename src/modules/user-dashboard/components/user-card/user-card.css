@@ -1,0 +1,83 @@
+.user-card {
+  background-color: #FFFFFF;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.user-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.user-card-header {
+  margin-bottom: 1rem;
+}
+
+.user-card-role {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.user-card-body {
+  flex: 1;
+  margin-bottom: 1.5rem;
+}
+
+.user-card-name {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #222222;
+}
+
+.user-card-title {
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+  color: #666666;
+}
+
+.user-card-team {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.875rem;
+  color: #222222;
+}
+
+.user-card-contact {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #222222;
+}
+
+.user-card-email {
+  color: #FF6B35;
+  text-decoration: underline;
+  transition: opacity 0.2s;
+}
+
+.user-card-email:hover {
+  opacity: 0.8;
+}
+
+.user-card-footer {
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .user-card {
+    padding: 1rem;
+  }
+
+  .user-card-name {
+    font-size: 1.125rem;
+  }
+}
+

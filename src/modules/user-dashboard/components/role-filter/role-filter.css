@@ -1,0 +1,87 @@
+.role-filter-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.role-filter-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #222222;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.role-filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.role-filter-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  min-width: fit-content;
+}
+
+.role-filter-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.role-filter-button:active {
+  transform: translateY(0);
+}
+
+.role-filter-button[aria-pressed="true"] {
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .role-filter-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .role-filter-label {
+    width: 100%;
+  }
+
+  .role-filter-buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .role-filter-button {
+    width: 100%;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .role-filter-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .role-filter-button {
+    padding: 0.75rem 1rem;
+  }
+}
+

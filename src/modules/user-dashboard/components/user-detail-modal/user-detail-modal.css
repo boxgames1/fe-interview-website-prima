@@ -1,0 +1,82 @@
+.user-detail-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-detail-header {
+  margin-bottom: 1.5rem;
+}
+
+.user-detail-role {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.user-detail-name {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222222;
+}
+
+.user-detail-title {
+  margin: 0;
+  font-size: 1rem;
+  color: #666666;
+}
+
+.user-detail-body {
+  margin-bottom: 1.5rem;
+}
+
+.user-detail-info {
+  margin: 0 0 1rem 0;
+  font-size: 0.875rem;
+  color: #222222;
+}
+
+.user-detail-label {
+  font-weight: 600;
+}
+
+.user-detail-email {
+  color: #FF6B35;
+  text-decoration: underline;
+  transition: opacity 0.2s;
+}
+
+.user-detail-email:hover {
+  opacity: 0.8;
+}
+
+.user-detail-other {
+  margin-top: 1rem;
+}
+
+.user-detail-other .user-detail-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.user-detail-text {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #666666;
+  line-height: 1.6;
+}
+
+.user-detail-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #E5E5E5;
+}
+
