@@ -9,6 +9,7 @@
     "check": "biome check . --no-errors-on-unmatched",
     "check:fix": "biome check . --write",
     "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "tsc": "tsc -b"
   },
   "dependencies": {
@@ -27,6 +28,7 @@
     "@typescript-eslint/eslint-plugin": "^8.49.0",
     "@typescript-eslint/parser": "^8.49.0",
     "@vitejs/plugin-react-swc": "^4.2.2",
+    "@vitest/coverage-v8": "4.0.15",
     "jsdom": "^27.3.0",
     "typescript": "^5.9.3",
     "vite": "^7.2.7",
