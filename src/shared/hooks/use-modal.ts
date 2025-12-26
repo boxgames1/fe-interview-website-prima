@@ -30,7 +30,7 @@ export function useModal() {
       if (!modalRef.current) return;
 
       const focusableElements = modalRef.current.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
       );
 
       const firstElement = focusableElements[0] as HTMLElement;
@@ -49,7 +49,7 @@ export function useModal() {
     document.addEventListener('keydown', handleTab);
 
     const firstFocusable = modalRef.current?.querySelector(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
     ) as HTMLElement;
 
     firstFocusable?.focus();
@@ -79,4 +79,3 @@ export function useModal() {
     modalRef,
   };
 }
-

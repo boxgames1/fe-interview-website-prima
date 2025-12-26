@@ -18,9 +18,9 @@ export function RoleFilter({ selectedRole, onRoleSelect }: RoleFilterProps) {
   };
 
   return (
-    <div className="role-filter-container">
-      <span className="role-filter-label">{DASHBOARD_CONSTANTS.filterLabel}</span>
-      <div className="role-filter-buttons" role="group" aria-label="Filter users by role">
+    <div className='role-filter-container'>
+      <span className='role-filter-label'>{DASHBOARD_CONSTANTS.filterLabel}</span>
+      <div className='role-filter-buttons' role='group' aria-label='Filter users by role'>
         {USER_ROLES.map((role) => {
           const isActive = selectedRole === role;
           const backgroundColor = isActive ? getRoleColor(role) : '#FFFFFF';
@@ -30,8 +30,8 @@ export function RoleFilter({ selectedRole, onRoleSelect }: RoleFilterProps) {
           return (
             <button
               key={role}
-              type="button"
-              className="role-filter-button"
+              type='button'
+              className='role-filter-button'
               onClick={() => handleRoleClick(role)}
               aria-pressed={isActive}
               aria-label={`Filter by ${role} role`}
@@ -49,4 +49,3 @@ export function RoleFilter({ selectedRole, onRoleSelect }: RoleFilterProps) {
     </div>
   );
 }
-

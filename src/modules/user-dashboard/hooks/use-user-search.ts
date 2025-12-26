@@ -13,11 +13,10 @@ export function useUserSearch({ users, onFilterChange }: UseUserSearchProps) {
       const filtered = filterUsersByName(users, query);
       onFilterChange(filtered);
     },
-    [users, onFilterChange]
+    [users, onFilterChange],
   );
 
   return {
     handleSearch,
   };
 }
-

@@ -24,7 +24,7 @@ describe('Button', () => {
     render(
       <Button onClick={handleClick} disabled>
         Click me
-      </Button>
+      </Button>,
     );
 
     await user.click(screen.getByRole('button'));
@@ -38,14 +38,13 @@ describe('Button', () => {
   });
 
   it('applies secondary variant when specified', () => {
-    render(<Button variant="secondary">Click me</Button>);
+    render(<Button variant='secondary'>Click me</Button>);
     const button = screen.getByRole('button');
     expect(button.className).toContain('button--secondary');
   });
 
   it('supports aria-label', () => {
-    render(<Button aria-label="Close dialog">×</Button>);
+    render(<Button aria-label='Close dialog'>×</Button>);
     expect(screen.getByRole('button', { name: /close dialog/i })).toBeInTheDocument();
   });
 });
-

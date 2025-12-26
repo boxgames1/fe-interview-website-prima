@@ -10,7 +10,13 @@ interface ModalProps {
   'aria-labelledby'?: string;
 }
 
-export function Modal({ isOpen, onClose, title, children, 'aria-labelledby': ariaLabelledBy }: ModalProps) {
+export function Modal({
+  isOpen,
+  onClose,
+  title,
+  children,
+  'aria-labelledby': ariaLabelledBy,
+}: ModalProps) {
   const modalRef = useRef<HTMLDivElement>(null);
   const previousFocusRef = useRef<HTMLElement | null>(null);
 
@@ -42,7 +48,7 @@ export function Modal({ isOpen, onClose, title, children, 'aria-labelledby': ari
       document.body.style.overflow = 'hidden';
 
       const firstFocusable = modalRef.current?.querySelector(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
       ) as HTMLElement;
 
       firstFocusable?.focus();
@@ -62,14 +68,18 @@ export function Modal({ isOpen, onClose, title, children, 'aria-labelledby': ari
   if (!isOpen) return null;
 
   return (
-    <div className="modal-overlay" role="dialog" aria-modal="true" aria-labelledby={ariaLabelledBy || 'modal-title'}>
-      <div className="modal-content" ref={modalRef}>
-        <h2 id={ariaLabelledBy || 'modal-title'} className="modal-title">
+    <div
+      className='modal-overlay'
+      role='dialog'
+      aria-modal='true'
+      aria-labelledby={ariaLabelledBy || 'modal-title'}
+    >
+      <div className='modal-content' ref={modalRef}>
+        <h2 id={ariaLabelledBy || 'modal-title'} className='modal-title'>
           {title}
         </h2>
-        <div className="modal-body">{children}</div>
+        <div className='modal-body'>{children}</div>
       </div>
     </div>
   );
 }
-

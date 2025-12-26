@@ -18,4 +18,3 @@ export function trapFocus(container: HTMLElement, event: KeyboardEvent): void {
     firstElement.focus();
   }
 }
-

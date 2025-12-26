@@ -2,7 +2,6 @@ import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { UserGrid } from './index';
 import { type User } from '../../../../infrastructure/models/user-model';
-import { EmptyState } from '../empty-state';
 
 const mockUsers: User[] = [
   {
@@ -43,4 +42,3 @@ describe('UserGrid', () => {
     expect(list).toBeInTheDocument();
   });
 });
-

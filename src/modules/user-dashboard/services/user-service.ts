@@ -27,4 +27,3 @@ export function filterUsers(users: User[], nameQuery: string, role: UserRole | n
   filtered = filterUsersByRole(filtered, role);
   return filtered;
 }
-

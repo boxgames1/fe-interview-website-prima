@@ -47,8 +47,9 @@ describe('UserDetailModal', () => {
 
   it('renders email as a link', () => {
     render(<UserDetailModal user={mockUser} isOpen={true} onClose={vi.fn()} />);
-    const emailLink = screen.getByRole('link', { name: /john.doe@example.com/i });
+    const emailLink = screen.getByRole('link', {
+      name: /john.doe@example.com/i,
+    });
     expect(emailLink).toHaveAttribute('href', 'mailto:john.doe@example.com');
   });
 });
-

@@ -7,4 +7,3 @@ export function matchesSearch(query: string, text: string): boolean {
   const normalizedText = normalizeString(text);
   return normalizedText.includes(normalizedQuery);
 }
-

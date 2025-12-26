@@ -11,4 +11,3 @@ export const DASHBOARD_CONSTANTS = {
   emptyStateMessage: 'No users found matching your search criteria.',
   errorMessage: 'Failed to load users. Please try again later.',
 } as const;
-

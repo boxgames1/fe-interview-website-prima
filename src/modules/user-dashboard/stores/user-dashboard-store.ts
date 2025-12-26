@@ -32,7 +32,7 @@ const initialState: UserDashboardState = {
 
 export function userDashboardReducer(
   state: UserDashboardState,
-  action: UserDashboardAction
+  action: UserDashboardAction,
 ): UserDashboardState {
   switch (action.type) {
     case 'SET_USERS':
@@ -57,4 +57,3 @@ export function userDashboardReducer(
 }
 
 export type { UserDashboardState, UserDashboardAction };
-

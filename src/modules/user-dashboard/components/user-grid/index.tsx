@@ -14,13 +14,12 @@ export function UserGrid({ users, onUserSelect }: UserGridProps) {
   }
 
   return (
-    <div className="user-grid" role="list" aria-label="User list">
+    <div className='user-grid' role='list' aria-label='User list'>
       {users.map((user) => (
-        <div key={user.id} role="listitem">
+        <div key={user.id} role='listitem'>
           <UserCard user={user} onViewDetails={onUserSelect} />
         </div>
       ))}
     </div>
   );
 }
-

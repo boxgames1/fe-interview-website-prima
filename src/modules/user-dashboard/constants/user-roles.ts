@@ -13,4 +13,3 @@ export function getRoleTextColor(role: UserRole): string {
   }
   return '#FFFFFF';
 }
-

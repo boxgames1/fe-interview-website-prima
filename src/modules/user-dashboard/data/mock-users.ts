@@ -13,7 +13,16 @@ const titles = [
   'QA Engineer',
   'Technical Lead',
 ];
-const teams = ['Security', 'Website', 'Finance', 'Marketing', 'Engineering', 'Product', 'Design', 'Operations'];
+const teams = [
+  'Security',
+  'Website',
+  'Finance',
+  'Marketing',
+  'Engineering',
+  'Product',
+  'Design',
+  'Operations',
+];
 
 const firstNames = [
   'George',
@@ -140,4 +149,3 @@ export function generateMockUsers(count: number = 30): User[] {
 }
 
 export const MOCK_USERS: User[] = generateMockUsers(30);
-

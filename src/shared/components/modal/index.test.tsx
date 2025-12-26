@@ -6,9 +6,9 @@ import { Modal } from './index';
 describe('Modal', () => {
   it('renders when isOpen is true', () => {
     render(
-      <Modal isOpen={true} onClose={vi.fn()} title="Test Modal">
+      <Modal isOpen={true} onClose={vi.fn()} title='Test Modal'>
         <p>Modal content</p>
-      </Modal>
+      </Modal>,
     );
     expect(screen.getByRole('dialog')).toBeInTheDocument();
     expect(screen.getByText('Test Modal')).toBeInTheDocument();
@@ -17,9 +17,9 @@ describe('Modal', () => {
 
   it('does not render when isOpen is false', () => {
     render(
-      <Modal isOpen={false} onClose={vi.fn()} title="Test Modal">
+      <Modal isOpen={false} onClose={vi.fn()} title='Test Modal'>
         <p>Modal content</p>
-      </Modal>
+      </Modal>,
     );
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
   });
@@ -28,9 +28,9 @@ describe('Modal', () => {
     const handleClose = vi.fn();
     const user = userEvent.setup();
     render(
-      <Modal isOpen={true} onClose={handleClose} title="Test Modal">
+      <Modal isOpen={true} onClose={handleClose} title='Test Modal'>
         <p>Modal content</p>
-      </Modal>
+      </Modal>,
     );
 
     const overlay = screen.getByRole('dialog').parentElement;
@@ -42,9 +42,9 @@ describe('Modal', () => {
 
   it('has proper ARIA attributes', () => {
     render(
-      <Modal isOpen={true} onClose={vi.fn()} title="Test Modal">
+      <Modal isOpen={true} onClose={vi.fn()} title='Test Modal'>
         <p>Modal content</p>
-      </Modal>
+      </Modal>,
     );
 
     const dialog = screen.getByRole('dialog');
@@ -52,4 +52,3 @@ describe('Modal', () => {
     expect(dialog).toHaveAttribute('aria-labelledby', 'modal-title');
   });
 });
-

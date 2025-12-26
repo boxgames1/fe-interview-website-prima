@@ -26,7 +26,8 @@ export const theme = {
     xxl: '3rem',
   },
   typography: {
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+    fontFamily:
+      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',
@@ -60,4 +61,3 @@ export const theme = {
     lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
   },
 } as const;
-

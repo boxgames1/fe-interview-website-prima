@@ -27,7 +27,7 @@ describe('RoleFilter', () => {
   it('deselects role when clicking the same role again', async () => {
     const handleRoleSelect = vi.fn();
     const user = userEvent.setup();
-    render(<RoleFilter selectedRole="ADMIN" onRoleSelect={handleRoleSelect} />);
+    render(<RoleFilter selectedRole='ADMIN' onRoleSelect={handleRoleSelect} />);
 
     const adminButton = screen.getByRole('button', { name: /admin/i });
     await user.click(adminButton);
@@ -35,7 +35,7 @@ describe('RoleFilter', () => {
   });
 
   it('shows active state for selected role', () => {
-    render(<RoleFilter selectedRole="ADMIN" onRoleSelect={vi.fn()} />);
+    render(<RoleFilter selectedRole='ADMIN' onRoleSelect={vi.fn()} />);
     const adminButton = screen.getByRole('button', { name: /admin/i });
     expect(adminButton).toHaveAttribute('aria-pressed', 'true');
   });
@@ -46,4 +46,3 @@ describe('RoleFilter', () => {
     expect(group).toBeInTheDocument();
   });
 });
-

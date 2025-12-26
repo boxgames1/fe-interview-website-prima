@@ -9,4 +9,3 @@ export interface User {
   team: string;
   otherDetails: string;
 }
-

@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
 import { renderHook, act } from '@testing-library/react';
 import { useUserSearch } from './use-user-search';
-import { type User } from '../../../../infrastructure/models/user-model';
+import { type User } from '../../../infrastructure/models/user-model';
 
 const mockUsers: User[] = [
   {
@@ -27,9 +27,7 @@ const mockUsers: User[] = [
 describe('useUserSearch', () => {
   it('filters users by name', () => {
     const onFilterChange = vi.fn();
-    const { result } = renderHook(() =>
-      useUserSearch({ users: mockUsers, onFilterChange })
-    );
+    const { result } = renderHook(() => useUserSearch({ users: mockUsers, onFilterChange }));
 
     act(() => {
       result.current.handleSearch('John');
@@ -40,9 +38,7 @@ describe('useUserSearch', () => {
 
   it('returns all users when query is empty', () => {
     const onFilterChange = vi.fn();
-    const { result } = renderHook(() =>
-      useUserSearch({ users: mockUsers, onFilterChange })
-    );
+    const { result } = renderHook(() => useUserSearch({ users: mockUsers, onFilterChange }));
 
     act(() => {
       result.current.handleSearch('');
@@ -53,9 +49,7 @@ describe('useUserSearch', () => {
 
   it('performs case-insensitive search', () => {
     const onFilterChange = vi.fn();
-    const { result } = renderHook(() =>
-      useUserSearch({ users: mockUsers, onFilterChange })
-    );
+    const { result } = renderHook(() => useUserSearch({ users: mockUsers, onFilterChange }));
 
     act(() => {
       result.current.handleSearch('jane');
@@ -64,4 +58,3 @@ describe('useUserSearch', () => {
     expect(onFilterChange).toHaveBeenCalledWith([mockUsers[1]]);
   });
 });
-

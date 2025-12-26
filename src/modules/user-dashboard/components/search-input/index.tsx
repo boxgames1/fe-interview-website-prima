@@ -21,26 +21,25 @@ export function SearchInput({ value, onChange, onSearch }: SearchInputProps) {
   };
 
   return (
-    <div className="search-input-container">
-      <label htmlFor="user-search" className="search-label">
+    <div className='search-input-container'>
+      <label htmlFor='user-search' className='search-label'>
         {DASHBOARD_CONSTANTS.searchLabel}
       </label>
-      <div className="search-input-wrapper">
+      <div className='search-input-wrapper'>
         <input
-          id="user-search"
-          type="text"
-          className="search-input"
+          id='user-search'
+          type='text'
+          className='search-input'
           placeholder={DASHBOARD_CONSTANTS.searchPlaceholder}
           value={value}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
-          aria-label="Search users by name"
+          aria-label='Search users by name'
         />
-        <Button onClick={onSearch} aria-label="Search">
+        <Button onClick={onSearch} aria-label='Search'>
           Search
         </Button>
       </div>
     </div>
   );
 }
-

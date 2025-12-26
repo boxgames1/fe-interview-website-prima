@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
 import { renderHook, act } from '@testing-library/react';
 import { useRoleFilter } from './use-role-filter';
-import { type User } from '../../../../infrastructure/models/user-model';
+import { type User } from '../../../infrastructure/models/user-model';
 
 const mockUsers: User[] = [
   {
@@ -27,9 +27,7 @@ const mockUsers: User[] = [
 describe('useRoleFilter', () => {
   it('filters users by role', () => {
     const onFilterChange = vi.fn();
-    const { result } = renderHook(() =>
-      useRoleFilter({ users: mockUsers, onFilterChange })
-    );
+    const { result } = renderHook(() => useRoleFilter({ users: mockUsers, onFilterChange }));
 
     act(() => {
       result.current.handleRoleFilter('ADMIN');
@@ -40,9 +38,7 @@ describe('useRoleFilter', () => {
 
   it('returns all users when role is null', () => {
     const onFilterChange = vi.fn();
-    const { result } = renderHook(() =>
-      useRoleFilter({ users: mockUsers, onFilterChange })
-    );
+    const { result } = renderHook(() => useRoleFilter({ users: mockUsers, onFilterChange }));
 
     act(() => {
       result.current.handleRoleFilter(null);
@@ -51,4 +47,3 @@ describe('useRoleFilter', () => {
     expect(onFilterChange).toHaveBeenCalledWith(mockUsers);
   });
 });
-

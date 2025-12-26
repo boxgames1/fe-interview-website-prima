@@ -14,11 +14,10 @@ export function useRoleFilter({ users, onFilterChange }: UseRoleFilterProps) {
       const filtered = filterUsersByRole(users, role);
       onFilterChange(filtered);
     },
-    [users, onFilterChange]
+    [users, onFilterChange],
   );
 
   return {
     handleRoleFilter,
   };
 }
-
