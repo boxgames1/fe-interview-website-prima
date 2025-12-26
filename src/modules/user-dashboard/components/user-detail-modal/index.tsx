@@ -18,7 +18,7 @@ export function UserDetailModal({ user, isOpen, onClose }: UserDetailModalProps)
   const roleTextColor = getRoleTextColor(user.role);
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} title={user.name} aria-labelledby='user-detail-title'>
+    <Modal isOpen={isOpen} onClose={onClose} title={user.name} aria-labelledby='modal-title'>
       <div className='user-detail-content'>
         <div className='user-detail-header'>
           <span
@@ -27,9 +27,6 @@ export function UserDetailModal({ user, isOpen, onClose }: UserDetailModalProps)
           >
             {user.role}
           </span>
-          <h3 id='user-detail-title' className='user-detail-name'>
-            {user.name}
-          </h3>
           <p className='user-detail-title'>{user.title}</p>
         </div>
 
